@@ -1,6 +1,6 @@
 import { WorkflowRun, WorkflowStep, ProductInput } from '../types';
 import { v4 as uuidv4 } from 'uuid';
-import { db } from './database';
+import { db } from '../models/database';
 import { generateAllContent } from '../services/aiService';
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
