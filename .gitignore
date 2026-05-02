@@ -1,168 +1,54 @@
-
-import os
-
-# Backend .gitignore
-backend_gitignore = """# Dependencies
+# Dependencies
 node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
 # Build outputs
 dist/
-build/
-*.tsbuildinfo
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-.env.development
-.env.test
-.env.production
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
-
-# Testing
-coverage/
-.nyc_output/
-
-# Misc
-.cache/
-temp/
-tmp/
-*.pid
-*.seed
-*.pid.lock
-
-# TypeScript
-*.js.map
-*.d.ts.map
-"""
-
-with open("/mnt/agents/output/ai-growth-engine/backend/.gitignore", "w") as f:
-    f.write(backend_gitignore)
-
-# Frontend .gitignore
-frontend_gitignore = """# Dependencies
-node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Build outputs
-dist/
-build/
-*.tsbuildinfo
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-.env.development
-.env.test
-.env.production
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Testing
-coverage/
-.nyc_output/
-
-# Vite
-.vite/
-
-# Misc
-.cache/
-temp/
-tmp/
-"""
-
-with open("/mnt/agents/output/ai-growth-engine/frontend/.gitignore", "w") as f:
-    f.write(frontend_gitignore)
-
-# Root .gitignore
-root_gitignore = """# Dependencies
-node_modules/
-.pnp
-.pnp.js
-
-# Build outputs
-dist/
-build/
-*.tsbuildinfo
 
 # Environment
 .env
 .env.local
-.env.*.local
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
-Thumbs.db
 
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+------------------------------
+📄 backend/.gitignore
+# Dependencies
+node_modules/
 
-# Testing
-coverage/
-.nyc_output/
+# Build output
+dist/
 
-# Misc
-.cache/
-"""
+# Environment
+.env
+.env.local
 
-with open("/mnt/agents/output/ai-growth-engine/.gitignore", "w") as f:
-    f.write(root_gitignore)
+# IDE
+.vscode/
+.idea/
 
-# Verify
-for path in [
-    "/mnt/agents/output/ai-growth-engine/.gitignore",
-    "/mnt/agents/output/ai-growth-engine/backend/.gitignore",
-    "/mnt/agents/output/ai-growth-engine/frontend/.gitignore"
-]:
-    size = os.path.getsize(path)
-    print(f"✅ {path} ({size} bytes)")
+# OS
+.DS_Store
+
+------------------------------
+📄 frontend/.gitignore
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
